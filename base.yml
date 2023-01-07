@@ -1,0 +1,77 @@
+include: fedora-common-ostree.yaml
+
+ref: base-ostree
+rojig:
+  name: base-ostree
+  summary: "Fedora minimal OSTree image for my future setups"
+  license: MIT
+
+repos:
+  - fedora-37
+  - fedora-37-updates
+  - fedora-37-updates-testing
+  - rpmfusion-free
+  - rpmfusion-free-updates
+
+packages:
+# hardware/drivers
+  - kernel
+  - kernel-modules-extra
+  - iwl6000g2a-firmware
+  - iwl7260-firmware
+  - alsa-sof-firmware
+  - NetworkManager-wifi
+  #- NetworkManager-openvpn-gnome
+  - powertop
+  - iwd
+  - wpa_supplicant
+# basic system
+  - acl
+  - attr
+  - basesystem
+  - cryptsetup
+  - dnsmasq
+  - filesystem
+  - hostname
+  - iproute
+  - kbd
+  - nss-altfiles
+  - pciutils
+  # don't care, but rpm-ostree build fails otherwise
+  - selinux-policy-targeted
+  - sudo
+  - usbutils
+# shell tools and development
+  - bc
+  - gnupg2
+  - fpaste
+  - lsof
+  - man-db
+  - mtr
+  - tree
+  - bzip2
+  - vim-enhanced
+  - bash-completion
+  - openvpn
+  - mutt
+  - nmap-ncat
+  - isync
+  - openssh-server
+  - systemd-container
+  - git
+  - patchutils
+  - make
+  - strace
+  - wget
+  - w3m
+  - cockpit-system
+  - cockpit-ws
+  - krb5-workstation
+
+
+#exclude-packages:
+
+#add-files:
+#  - ["2015-RH-IT-Root-CA.pem", "/etc/pki/ca-trust/source/anchors/2015-RH-IT-Root-CA.pem"]
+
+postprocess-script: base-post.sh
