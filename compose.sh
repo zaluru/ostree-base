@@ -14,7 +14,7 @@ fi
 rpm-ostree compose tree --unified-core --cachedir=$CACHE --repo=$REPO base.yaml
 # HACK: networking in GitHub is a bit flaky, retry a few times
 for retry in $(seq 3); do
-    rpm-ostree compose container-encapsulate --repo=$REPO ostree-base ${SKOPEO_TARGET}:ghcr.io/zaluru/ostree-base:latest && exit 0
+    rpm-ostree compose container-encapsulate --repo=$REPO base ${SKOPEO_TARGET}:ghcr.io/zaluru/ostree-base:latest && exit 0
     [ "$SKOPEO_TARGET" = registry ] || break
     sleep 30
 done
