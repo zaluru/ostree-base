@@ -1,0 +1,8 @@
+#+title: ostree base
+Minimal base for future ostree setups
+
+I plan to modify this base image using a Containerfile in another repository to add my configuration and desired software
+
+For now it is mostly a copy of [[https://github.com/martinpitt/ostree-pitti-workstation][this]] repo by [[https://github.com/martinpitt][martinpitt]]
+
+When fedora IoT oci containers become available, I may switch to them instead of building my own base image
