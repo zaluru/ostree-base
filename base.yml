@@ -1,8 +1,8 @@
 include: fedora-common-ostree.yaml
 
-ref: base-ostree
+ref: ostree-base
 rojig:
-  name: base-ostree
+  name: ostree-base
   summary: "Fedora minimal OSTree image for my future setups"
   license: MIT
 
