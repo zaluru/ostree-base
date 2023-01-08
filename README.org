@@ -3,7 +3,7 @@
 
 Minimal base for future ostree setups
 
-I plan to modify this base image using a Containerfile in another repository to add my configuration and desired software
+This base image is then used in my [[https://github.com/zaluru/ostree-workstation][ostree-workstation repo]] which configures further
 
 For now it is mostly a copy of [[https://github.com/martinpitt/ostree-pitti-workstation][this]] repo by [[https://github.com/martinpitt][martinpitt]]
 
