@@ -1,5 +1,6 @@
 #+title: ostree base
 [[https://github.com/zaluru/ostree-base/actions/workflows/main.yml][file:https://github.com/zaluru/ostree-base/actions/workflows/main.yml/badge.svg]]
+
 Minimal base for future ostree setups
 
 I plan to modify this base image using a Containerfile in another repository to add my configuration and desired software
